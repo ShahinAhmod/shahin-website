@@ -17,6 +17,56 @@
 }
 
 
+/* Responsive Layout */
+
+header, nav, footer {
+  padding: 1rem;
+}
+
+/* Flex container for header - nav left, title right */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Navigation list */
+nav ul.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul.nav-links li {
+  margin-right: 1.5rem;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul.nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul.nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  h1 {
+    align-self: flex-end;
+    margin-top: 1rem;
+  }
+}
+
+
+
 /* Reset some basic styles */
 * {
   margin: 0;
