@@ -117,3 +117,43 @@ nav {
   background-color: #e6b422; /* gold-ish highlight */
   color: rgb(10, 25, 47);
 }
+.courses-section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    color: #f0f0f0;
+}
+
+.courses-section h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.course {
+    background-color: rgb(20, 40, 70);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.course:hover {
+    background-color: rgb(30, 55, 95);
+}
+
+.course h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: rgb(200, 220, 255);
+}
+
+.course p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
