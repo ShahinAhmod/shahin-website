@@ -306,3 +306,10 @@ nav {
 }
 
 
+.hero-gradient {
+  background: linear-gradient(135deg, rgb(10, 25, 47) 0%, #1a1f3b 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
