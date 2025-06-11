@@ -8,8 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AI-Powered Finance Courses for Bangladeshi Students & Professionals | Shahin Ahmod</title>
   <link rel="stylesheet" href="style.css" />
-    <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Tailwind CDN (or linked correctly if built locally) -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- AOS Animation (important for fade-right/fade-left) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </head>
 
@@ -27,62 +35,79 @@
     </nav>
   </header>
 
-  <main>
-  <section id="home" class="hero-gradient pt-28 pb-20 md:pt-32 md:pb-24">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-center">
-
-        <!-- LEFT: Text -->
-        <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            Transform Your Skills With Expert Guidance
-          </h1>
-          <p class="text-lg md:text-xl text-indigo-100 mb-8">
-            Learn from industry-leading courses designed to elevate your expertise and advance your career.
-          </p>
-          <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <a href="#courses" class="px-8 py-3 bg-white text-indigo-600 font-medium rounded-lg shadow-lg hover:bg-gray-100 transition-colors duration-300 text-center">
-              Explore Courses
-            </a>
-            <a href="#about" class="px-8 py-3 bg-transparent border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors duration-300 text-center">
-              Learn More
-            </a>
-          </div>
-        </div>
-
-        <!-- RIGHT: Blob + Icon -->
-        <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
-          <div class="relative">
-            <svg class="w-64 h-64 md:w-80 md:h-80 text-white" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <path fill="currentColor" d="M44.1,-72.2C55.3,-63.7,55.7,-45.8,56.1,-32.6C56.4,-19.4,56.7,-10.7,56.6,-1.3C56.4,8.1,55.7,16.3,52.5,24.1C49.3,31.9,43.5,39.3,35.3,43.3C27,47.3,16.4,48,7.5,45.3C-1.3,42.6,-7.6,36.5,-16.2,33.4C-24.8,30.4,-35.6,30.3,-43.1,24.6C-50.6,18.8,-54.7,7.4,-53.3,-3.2C-52,-13.8,-45.3,-24.3,-38.7,-33.6C-32,-42.9,-25.5,-51,-16.7,-59.7C-7.9,-68.4,3.2,-77.6,14.4,-79.8C25.7,-82,36.9,-77.2,44.1,-72.2Z" transform="translate(100 100)" />
-            </svg>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <svg class="w-40 h-40 md:w-48 md:h-48 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-11v4h2v-4h-2zm0 6v2h2v-2h-2z" clip-rule="evenodd" />
-              </svg>
+  <section id="home" class="hero-gradient pt-28 pb-20 md:pt-32 md:pb-24 w-full">
+      <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center">
+          <!-- LEFT -->
+          <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+              Transform Your Skills With Expert Guidance
+            </h1>
+            <p class="text-lg md:text-xl text-indigo-100 mb-8">
+              Learn from industry-leading courses designed to elevate your expertise and advance your career.
+            </p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+              <a href="#courses" class="px-8 py-3 bg-white text-indigo-600 font-medium rounded-lg shadow-lg hover:bg-gray-100 transition-colors duration-300 text-center">
+                Explore Courses
+              </a>
+              <a href="#about" class="px-8 py-3 bg-transparent border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors duration-300 text-center">
+                Learn More
+              </a>
             </div>
           </div>
+
+          <!-- RIGHT -->
+          <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+            <div class="relative">
+              <svg class="w-64 h-64 md:w-80 md:h-80 text-white" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M44.1,-72.2C55.3,-63.7,55.7,-45.8,56.1,-32.6C56.4,-19.4,56.7,-10.7,56.6,-1.3C56.4,8.1,55.7,16.3,52.5,24.1C49.3,31.9,43.5,39.3,35.3,43.3C27,47.3,16.4,48,7.5,45.3C-1.3,42.6,-7.6,36.5,-16.2,33.4C-24.8,30.4,-35.6,30.3,-43.1,24.6C-50.6,18.8,-54.7,7.4,-53.3,-3.2C-52,-13.8,-45.3,-24.3,-38.7,-33.6C-32,-42.9,-25.5,-51,-16.7,-59.7C-7.9,-68.4,3.2,-77.6,14.4,-79.8C25.7,-82,36.9,-77.2,44.1,-72.2Z" transform="translate(100 100)" />
+              </svg>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg class="w-40 h-40 md:w-48 md:h-48 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-11v4h2v-4h-2zm0 6v2h2v-2h-2z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  </main>
+    <section class="why-learn-section">
+      <div class="why-learn-container">
+        <h2 class="why-learn-title">Why Learn with Me?</h2>
+        <p class="why-learn-subtitle">Your learning experience is shaped by real-world knowledge, practical tools, and a deep passion for Finance and Accounting.</p>
 
+        <div class="why-learn-grid">
+          <div class="why-card">
+            <h3>Real Experience</h3>
+            <p>I bring practical knowledge from my background in accounting, finance, and real business challenges.</p>
+          </div>
+          <div class="why-card">
+            <h3>Simple & Clear Teaching</h3>
+            <p>No boring lectures. Just real-world tools, simplified explanations, and hands-on examples.</p>
+          </div>
+          <div class="why-card">
+            <h3>Focused on Your Growth</h3>
+            <p>Whether you're a student or a business owner, the goal is to boost your skills and confidence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
   <footer>
     <p>&copy; 2025 Shahin Ahmod. All rights reserved.</p>
   </footer>
 
 
 
-  <!-- AOS JS (Only Once) -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+  <!-- AOS Animation (important for fade-right/fade-left) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
+    AOS.init();
   </script>
 
   <!-- Scripts -->
