@@ -85,3 +85,35 @@ footer {
     margin-top: 0.75rem;
   }
 }
+/* Navigation styles */
+nav {
+  background-color: rgb(10, 25, 47);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #1e2e4f;
+}
+
+.nav-links li a.active {
+  background-color: #e6b422; /* gold-ish highlight */
+  color: rgb(10, 25, 47);
+}
