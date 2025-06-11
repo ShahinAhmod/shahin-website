@@ -13,6 +13,40 @@ body {
   line-height: 1.6;
 }
 
+/* Container for header: align nav left, site name right */
+header {
+  display: flex;
+  justify-content: space-between; /* push items to edges */
+  align-items: center;            /* vertically center */
+  padding: 1rem 2rem;
+  background-color: rgb(10, 25, 47);
+}
+
+/* Navigation menu aligned left */
+.nav-links {
+  display: flex;
+  gap: 1.5rem; /* space between links */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation links styling */
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Site name aligned right */
+header h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+
 /* Header styling */
 header {
   background-color: rgb(10, 25, 47);
