@@ -5,9 +5,15 @@
   <meta name="description" content="Explore AI-powered accounting and finance courses designed for Bangladeshi students and professionals. Boost your finance career and skills with Shahin Ahmod's dynamic learning platform." />
   <meta name="keywords" content="Accounting, Finance, Courses, Support, Contact, Questions, Queries, Learning, Education, AI-powered support">
   <meta name="author" content="Shahin Ahmod">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI-Powered Finance Courses for Bangladeshi Students & Professionals | Shahin Ahmod</title>
   <link rel="stylesheet" href="style.css" />
+  
+  <!-- Google Fonts --> 
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 
   <!-- Tailwind CDN (or linked correctly if built locally) -->
 <script src="https://cdn.tailwindcss.com"></script>
@@ -24,18 +30,24 @@
 <body>
   <header class="header-container">
     <h1>Shahin Ahmod</h1>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <nav class="navbar">
+      <div class="nav-container">
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          &#9776;
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </nav>
+
   </header>
 
-  <section id="home" class="hero-gradient pt-28 pb-20 md:pt-32 md:pb-24 w-full">
+    <section id="home" class="hero-gradient pt-28 pb-20 md:pt-32 md:pb-24 w-full">
       <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row items-center">
           <!-- LEFT -->
@@ -74,6 +86,7 @@
       </div>
     </section>
 
+    <!-- why-learn-section -->
     <section class="why-learn-section">
       <div class="why-learn-container">
         <h2 class="why-learn-title">Why Learn with Me?</h2>
@@ -96,12 +109,65 @@
       </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <h2 class="section-title">What Students Say</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "This platform helped me understand accounting concepts clearly. Shahin explains everything in a simple and structured way!"
+            </p>
+            <h4 class="testimonial-author">— Amina K.</h4>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "I love the practical examples and the hands-on learning style. Highly recommended for finance beginners!"
+            </p>
+            <h4 class="testimonial-author">— Rehan M.</h4>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "The content is well-organized, and the site layout is very user-friendly. I’ve learned so much in just a few weeks."
+            </p>
+            <h4 class="testimonial-author">— Liisa T.</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="newsletter-section">
+      <div class="newsletter-container">
+        <h2>Stay Ahead in Finance & AI!</h2>
+        <p>Get exclusive insights, course updates, and expert tips – right in your inbox.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <small>We respect your privacy. No spam ever.</small>
+      </div>
+    </section>
   
-  <footer>
-    <p>&copy; 2025 Shahin Ahmod. All rights reserved.</p>
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-contact">
+        <p>Email: <a href="mailto:hello@shahinahmod.com">hello@shahinahmod.com</a></p>
+        <p>From Sylhet to Tallinn | Estonia (EU)</p>
+      </div>
+      <div class="footer-copy">
+        <p>&copy; 2025 Shahin Ahmod. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer-social">
+      <a href="https://facebook.com" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" aria-label="X-Twitter" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://youtube.com" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+
   </footer>
-
-
 
   <!-- AOS Animation (important for fade-right/fade-left) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -110,8 +176,18 @@
     AOS.init();
   </script>
 
-  <!-- Scripts -->
+  <!-- Scripts for Smartphone Nav-->
   <script src="scripts.js" defer></script>
+
+  <script>
+    const toggleButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    toggleButton.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
 
 </body>
 </html>
